@@ -9,11 +9,6 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-  timeout: 5000
-  port: '<%= ENV.fetch("DB_PORT") || 5432 %>'
-
-
-
 development:
   <<: *default
   database: my_app_development
@@ -30,9 +25,26 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
+
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
   database: my_app_production
 
   username: '<%= ENV["DATABASE_USER"] %>'
   password: '<%= ENV["DATABASE_PASSWORD"] %>'
+
+  primary:
+    <<: *default
+    database: storage/production.sqlite3
+  cache:
+    <<: *default
+    database: storage/production_cache.sqlite3
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *default
+    database: storage/production_queue.sqlite3
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *default
+    database: storage/production_cable.sqlite3
+    migrations_paths: db/cable_migrate
