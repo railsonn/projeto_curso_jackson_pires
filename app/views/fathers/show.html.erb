@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @father, show_page: true %>
+
+<div>
+  <hr>
+
+  <ul>
+    <% @father.children.each do |child| %>
+
+      <li><%= "#{child.name} - #{pegar_sexo(child_sex)}" %></li>
+
+    <% end %>
+  </ul>
+
+  <%= link_to "Edit this father", edit_father_path(@father) %> |
+  <%= link_to "Back to fathers", fathers_path %>
+
+  <%= button_to "Destroy this father", @father, method: :delete %>
+</div>

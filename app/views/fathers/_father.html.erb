@@ -1,0 +1,23 @@
+<div id="<%= dom_id father %>">
+  <p>
+    <strong style= "padding-right: 10px">Name:</strong>
+    <%= father.name %>
+
+    <strong style= "padding-left: 10px">Cpf:</strong>
+    <%= father.cpf %>
+
+    <strong style= "padding-left: 10px">Email:</strong>
+    <%= father.email %>
+
+    <strong>Occupation:</strong>
+    <%= father.occupation_description %>
+
+    <hr>
+
+    <strong>Avatar:</strong>
+      <% if local_assigns[:show_page] %>
+        <%= image_tag father.avatar, size: "90x60" %>
+      <% end %>
+  </p>
+
+</div>
