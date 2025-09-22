@@ -8,7 +8,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  username: '<%= ENV["DATABASE_USER"] %>'
+  password: '<%= ENV["DATABASE_PASSWORD"] %>'
+  port: '<%= ENV.fetch("DB_PORT") || 5432 %>'
 
 development:
   <<: *default
@@ -25,19 +27,7 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  primary:
-    <<: *default
-    database: storage/production.postgresql
-    url: <%= ENV['DATABASE_URL'] %>
-  cache:
-    <<: *default
-    database: storage/production_cache.postgresql
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: storage/production_queue.postgresql
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: storage/production_cable.postgresql
-    migrations_paths: db/cable_migrate
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  database: my_app_production
+ 
