@@ -9213,3 +9213,370 @@ Completed 200 OK in 21ms (Views: 13.6ms | ActiveRecord: 0.4ms (1 query, 0 cached
   [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4346549080646495835) /*application='Aula25'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2025-09-21 21:24:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 13.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/children" for ::1 at 2025-09-21 21:24:13 -0300
+Processing by ChildrenController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  [1m[36mChild Load (11.9ms)[0m  [1m[34mSELECT "children".* FROM "children" /*action='index',application='Aula25',controller='children'*/[0m
+  ↳ app/views/children/index.html.erb:8
+  Rendered children/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: -0.1ms | ActiveRecord: 16.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/children/new" for ::1 at 2025-09-21 21:24:14 -0300
+Processing by ChildrenController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering children/new.html.erb within layouts/application
+  [1m[36mFather Load (2.1ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" /*action='new',application='Aula25',controller='children'*/[0m
+  ↳ app/views/children/_form.html.erb:26
+  Rendered children/_form.html.erb (Duration: 15.2ms | GC: 0.0ms)
+  Rendered children/new.html.erb within layouts/application (Duration: 16.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | GC: 0.0ms)
+Completed 200 OK in 58ms (Views: 13.3ms | ActiveRecord: 17.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Aula25'*/[0m
+  [1m[35m (91.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_app_development" /*application='Aula25'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Aula25'*/[0m
+  [1m[35m (51.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "my_app_test" /*application='Aula25'*/[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Aula25'*/[0m
+  [1m[35m (122.2ms)[0m  [1m[35mCREATE DATABASE "my_app_development" ENCODING = 'unicode' /*application='Aula25'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Aula25'*/[0m
+  [1m[35m (69.2ms)[0m  [1m[35mCREATE DATABASE "my_app_test" ENCODING = 'unicode' /*application='Aula25'*/[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Aula25'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='Aula25'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='Aula25'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='Aula25'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='Aula25'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "children" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "children" ("id" bigserial primary key, "name" character varying, "sex" character varying, "father_id" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_children_on_father_id" ON "children" ("father_id") /*application='Aula25'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "fathers" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "fathers" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "cpf" character varying, "email" character varying, "occupation_id" integer DEFAULT 1 NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_fathers_on_occupation_id" ON "fathers" ("occupation_id") /*application='Aula25'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "occupations" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "occupations" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ocucupations" CASCADE /*application='Aula25'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ocucupations" ("id" bigserial primary key, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+ /*application='Aula25'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+ /*application='Aula25'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "children" ADD CONSTRAINT "fk_rails_cfc1ab3640"
+FOREIGN KEY ("father_id")
+  REFERENCES "fathers" ("id")
+ /*application='Aula25'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "fathers" ADD CONSTRAINT "fk_rails_b71efc13cd"
+FOREIGN KEY ("occupation_id")
+  REFERENCES "occupations" ("id")
+ /*application='Aula25'*/[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250829000528) /*application='Aula25'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250826224425),
+(20250826223319),
+(20250825001638),
+(20250825001501); /*application='Aula25'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-22 00:26:24.159724', '2025-09-22 00:26:24.159727') RETURNING "key" /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '72f136f26ac8b8631bc4a27cbb83b6ebd1695be5', '2025-09-22 00:26:24.163252', '2025-09-22 00:26:24.163254') RETURNING "key" /*application='Aula25'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4346549080646495835) /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Aula25'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4346549080646495835) /*application='Aula25'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, and [36mRAILS_MAX_THREADS[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_USER[0m, [36mDATABASE_PASSWORD[0m, [36mSECRET_KEY_BASE[0m, [36mRAILS_MAX_THREADS[0m, and [36mDB_PORT[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2025-09-26 20:34:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Aula25'*/[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 15.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fathers" for ::1 at 2025-09-26 20:34:14 -0300
+Processing by FathersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/index.html.erb within layouts/application
+  [1m[36mFather Load (11.6ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" /*action='index',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/index.html.erb:8
+  Rendered fathers/index.html.erb within layouts/application (Duration: 15.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 1.7ms | ActiveRecord: 15.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fathers/new" for ::1 at 2025-09-26 20:34:15 -0300
+Processing by FathersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/new.html.erb within layouts/application
+  [1m[36mOccupation Load (1.2ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='new',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_form.html.erb:36
+  Rendered fathers/_form.html.erb (Duration: 9.4ms | GC: 0.0ms)
+  Rendered fathers/new.html.erb within layouts/application (Duration: 10.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 10.8ms | ActiveRecord: 17.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fathers" for ::1 at 2025-09-26 20:34:39 -0300
+Processing by FathersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "father"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x0000703641fcf980 @tempfile=#<Tempfile:/tmp/RackMultipart20250926-7349-jprehe.png>, @content_type="image/png", @original_filename="Captura de Tela (1).png", @headers="Content-Disposition: form-data; name=\"father[avatar]\"; filename=\"Captura de Tela (1).png\"\r\nContent-Type: image/png\r\n">, "description"=>"@railson", "occupation_id"=>""}, "commit"=>"Create Father"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/new.html.erb within layouts/application
+  [1m[36mOccupation Load (0.3ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_form.html.erb:36
+  Rendered fathers/_form.html.erb (Duration: 4.7ms | GC: 1.1ms)
+  Rendered fathers/new.html.erb within layouts/application (Duration: 5.1ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 1.1ms)
+Completed 422 Unprocessable Content in 70ms (Views: 8.0ms | ActiveRecord: 5.7ms (1 query, 0 cached) | GC: 22.3ms)
+
+
+Started GET "/fathers" for ::1 at 2025-09-26 20:34:41 -0300
+Processing by FathersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/index.html.erb within layouts/application
+  [1m[36mFather Load (0.5ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" /*action='index',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/index.html.erb:8
+  Rendered fathers/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/occupations" for ::1 at 2025-09-26 20:34:50 -0300
+Processing by OccupationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering occupations/index.html.erb within layouts/application
+  [1m[36mOccupation Load (0.3ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='index',application='Aula25',controller='occupations'*/[0m
+  ↳ app/views/occupations/index.html.erb:8
+  Rendered occupations/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.5ms)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/occupations/new" for ::1 at 2025-09-26 20:34:51 -0300
+Processing by OccupationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering occupations/new.html.erb within layouts/application
+  [1m[36mOccupation Load (0.3ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='new',application='Aula25',controller='occupations'*/[0m
+  ↳ app/views/occupations/_form.html.erb:31
+  Rendered occupations/_form.html.erb (Duration: 4.6ms | GC: 0.5ms)
+  Rendered occupations/new.html.erb within layouts/application (Duration: 5.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.5ms)
+Completed 200 OK in 20ms (Views: 6.3ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started POST "/occupations" for ::1 at 2025-09-26 20:35:11 -0300
+Processing by OccupationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "occupation"=>{"description"=>"@railson", "occupation_id"=>""}, "commit"=>"Create Occupation"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='Aula25',controller='occupations'*/[0m
+  ↳ app/controllers/occupations_controller.rb:28:in `block in create'
+  [1m[36mOccupation Create (5.9ms)[0m  [1m[32mINSERT INTO "occupations" ("description", "created_at", "updated_at") VALUES ('@railson', '2025-09-26 23:35:11.773013', '2025-09-26 23:35:11.773013') RETURNING "id" /*action='create',application='Aula25',controller='occupations'*/[0m
+  ↳ app/controllers/occupations_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*action='create',application='Aula25',controller='occupations'*/[0m
+  ↳ app/controllers/occupations_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/occupations/1
+Completed 302 Found in 21ms (ActiveRecord: 7.9ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/occupations/1" for ::1 at 2025-09-26 20:35:11 -0300
+Processing by OccupationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOccupation Load (0.7ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" WHERE "occupations"."id" = 1 LIMIT 1 /*action='show',application='Aula25',controller='occupations'*/[0m
+  ↳ app/controllers/occupations_controller.rb:64:in `set_occupation'
+  Rendering layout layouts/application.html.erb
+  Rendering occupations/show.html.erb within layouts/application
+  Rendered occupations/_occupation.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered occupations/show.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 6.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/occupations" for ::1 at 2025-09-26 20:35:13 -0300
+Processing by OccupationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering occupations/index.html.erb within layouts/application
+  [1m[36mOccupation Load (0.4ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='index',application='Aula25',controller='occupations'*/[0m
+  ↳ app/views/occupations/index.html.erb:8
+  Rendered occupations/_occupation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered occupations/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.6ms)
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/fathers" for ::1 at 2025-09-26 20:35:20 -0300
+Processing by FathersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/index.html.erb within layouts/application
+  [1m[36mFather Load (0.7ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" /*action='index',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/index.html.erb:8
+  Rendered fathers/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.3ms)
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/fathers/new" for ::1 at 2025-09-26 20:35:21 -0300
+Processing by FathersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/new.html.erb within layouts/application
+  [1m[36mOccupation Load (0.4ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='new',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_form.html.erb:36
+  Rendered fathers/_form.html.erb (Duration: 4.0ms | GC: 0.5ms)
+  Rendered fathers/new.html.erb within layouts/application (Duration: 4.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.5ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/fathers" for ::1 at 2025-09-26 20:35:45 -0300
+Processing by FathersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "father"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007036423422c0 @tempfile=#<Tempfile:/tmp/RackMultipart20250926-7349-rot249.png>, @content_type="image/png", @original_filename="Captura de Tela (2).png", @headers="Content-Disposition: form-data; name=\"father[avatar]\"; filename=\"Captura de Tela (2).png\"\r\nContent-Type: image/png\r\n">, "description"=>"@rodrigo", "occupation_id"=>""}, "commit"=>"Create Father"}
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/new.html.erb within layouts/application
+  [1m[36mOccupation Load (0.4ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_form.html.erb:36
+  Rendered fathers/_form.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered fathers/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 11ms (Views: 3.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/fathers" for ::1 at 2025-09-26 20:36:16 -0300
+Processing by FathersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "father"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x000070364440a660 @tempfile=#<Tempfile:/tmp/RackMultipart20250926-7349-xh9yia.png>, @content_type="image/png", @original_filename="Captura de tela 2025-09-21 170455.png", @headers="Content-Disposition: form-data; name=\"father[avatar]\"; filename=\"Captura de tela 2025-09-21 170455.png\"\r\nContent-Type: image/png\r\n">, "description"=>"@rodrigo", "occupation_id"=>"1"}, "commit"=>"Create Father"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mFather Create (3.5ms)[0m  [1m[32mINSERT INTO "fathers" ("name", "created_at", "updated_at", "cpf", "email", "occupation_id") VALUES (NULL, '2025-09-26 23:36:16.772579', '2025-09-26 23:36:16.772579', NULL, NULL, 1) RETURNING "id" /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mActiveStorage::Blob Load (3.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Father' AND "active_storage_attachments"."name" = 'avatar' LIMIT 1 /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Father' AND "active_storage_attachments"."name" = 'avatar' LIMIT 1 /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ('s3iaf0fi781en04n0l4rmct1ws6y', 'Captura de tela 2025-09-21 170455.png', 'image/png', '{"identified":true}', 'local', 317435, '/A3XGnPJks8Ygbs6VWVfZg==', '2025-09-26 23:36:16.807766') RETURNING "id" /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ('avatar', 'Father', 1, 1, '2025-09-26 23:36:16.810546') RETURNING "id" /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mFather Update (1.9ms)[0m  [1m[33mUPDATE "fathers" SET "updated_at" = '2025-09-26 23:36:16.813967' WHERE "fathers"."id" = 1 /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='create',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+[36m  Disk Storage (2.2ms) [0m[32mUploaded file to key: s3iaf0fi781en04n0l4rmct1ws6y (checksum: /A3XGnPJks8Ygbs6VWVfZg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c8fb2f73-20b2-44b4-9197-80f4ea1fde86) to Async(default) with arguments: #<GlobalID:0x0000703644cdec50 @uri=#<URI::GID gid://aula25/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/fathers_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/fathers/1
+Completed 302 Found in 84ms (ActiveRecord: 15.3ms (6 queries, 0 cached) | GC: 8.4ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*application='Aula25'*/[0m
+Started GET "/fathers/1" for ::1 at 2025-09-26 20:36:16 -0300
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86] Performing ActiveStorage::AnalyzeJob (Job ID: c8fb2f73-20b2-44b4-9197-80f4ea1fde86) from Async(default) enqueued at 2025-09-26T23:36:16.843937415Z with arguments: #<GlobalID:0x00007036449651a0 @uri=#<URI::GID gid://aula25/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mActiveStorage::Blob Update (3.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = '{"identified":true,"analyzed":true}' WHERE "active_storage_blobs"."id" = 1 /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = 1 /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mFather Load (0.6ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" WHERE "fathers"."id" = 1 /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mFather Update (0.6ms)[0m  [1m[33mUPDATE "fathers" SET "updated_at" = '2025-09-26 23:36:16.922165' WHERE "fathers"."id" = 1 /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+Processing by FathersController#show as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86]   [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*application='Aula25',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+  Parameters: {"id"=>"1"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c8fb2f73-20b2-44b4-9197-80f4ea1fde86] Performed ActiveStorage::AnalyzeJob (Job ID: c8fb2f73-20b2-44b4-9197-80f4ea1fde86) from Async(default) in 72.42ms
+  [1m[36mFather Load (0.4ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" WHERE "fathers"."id" = 1 LIMIT 1 /*action='show',application='Aula25',controller='fathers'*/[0m
+  ↳ app/controllers/fathers_controller.rb:64:in `set_father'
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/show.html.erb within layouts/application
+  [1m[36mOccupation Load (0.4ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" WHERE "occupations"."id" = 1 LIMIT 1 /*action='show',application='Aula25',controller='fathers'*/[0m
+  ↳ app/models/father.rb:8:in `occupation_description'
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'Father' AND "active_storage_attachments"."name" = 'avatar' LIMIT 1 /*action='show',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_father.html.erb:19
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/_father.html.erb:19
+  Rendered fathers/_father.html.erb (Duration: 10.2ms | GC: 0.3ms)
+  [1m[36mChild Load (1.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."father_id" = 1 /*action='show',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/show.html.erb:9
+  Rendered fathers/show.html.erb within layouts/application (Duration: 20.7ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.6ms)
+Completed 200 OK in 29ms (Views: 16.6ms | ActiveRecord: 5.8ms (5 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--51a792ce5118dd15eab7932967a6012c94644fb3/Captura%20de%20tela%202025-09-21%20170455.png" for ::1 at 2025-09-26 20:36:17 -0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--51a792ce5118dd15eab7932967a6012c94644fb3", "filename"=>"Captura de tela 2025-09-21 170455"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='Aula25',controller='redirect'*/[0m
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: s3iaf0fi781en04n0l4rmct1ws6y (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzM2lhZjBmaTc4MWVuMDRuMGw0cm1jdDF3czZ5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiQ2FwdHVyYSBkZSB0ZWxhIDIwMjUtMDktMjEgMTcwNDU1LnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ0NhcHR1cmElMjBkZSUyMHRlbGElMjAyMDI1LTA5LTIxJTIwMTcwNDU1LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDktMjZUMjM6NDE6MTcuMDM5WiIsInB1ciI6ImJsb2Jfa2V5In19--9c54d96511295859065b409606739b9a7c1097bd/Captura%20de%20tela%202025-09-21%20170455.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzM2lhZjBmaTc4MWVuMDRuMGw0cm1jdDF3czZ5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiQ2FwdHVyYSBkZSB0ZWxhIDIwMjUtMDktMjEgMTcwNDU1LnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ0NhcHR1cmElMjBkZSUyMHRlbGElMjAyMDI1LTA5LTIxJTIwMTcwNDU1LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDktMjZUMjM6NDE6MTcuMDM5WiIsInB1ciI6ImJsb2Jfa2V5In19--9c54d96511295859065b409606739b9a7c1097bd/Captura%20de%20tela%202025-09-21%20170455.png
+Completed 302 Found in 22ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJzM2lhZjBmaTc4MWVuMDRuMGw0cm1jdDF3czZ5IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiQ2FwdHVyYSBkZSB0ZWxhIDIwMjUtMDktMjEgMTcwNDU1LnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJ0NhcHR1cmElMjBkZSUyMHRlbGElMjAyMDI1LTA5LTIxJTIwMTcwNDU1LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjUtMDktMjZUMjM6NDE6MTcuMDM5WiIsInB1ciI6ImJsb2Jfa2V5In19--9c54d96511295859065b409606739b9a7c1097bd/Captura%20de%20tela%202025-09-21%20170455.png" for ::1 at 2025-09-26 20:36:17 -0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"Captura de tela 2025-09-21 170455"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fathers" for ::1 at 2025-09-26 20:36:39 -0300
+Processing by FathersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fathers/index.html.erb within layouts/application
+  [1m[36mFather Load (0.6ms)[0m  [1m[34mSELECT "fathers".* FROM "fathers" /*action='index',application='Aula25',controller='fathers'*/[0m
+  ↳ app/views/fathers/index.html.erb:8
+  [1m[36mOccupation Load (0.5ms)[0m  [1m[34mSELECT "occupations".* FROM "occupations" WHERE "occupations"."id" = 1 LIMIT 1 /*action='index',application='Aula25',controller='fathers'*/[0m
+  ↳ app/models/father.rb:8:in `occupation_description'
+  Rendered fathers/_father.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered fathers/index.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 1.0ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
