@@ -8,15 +8,11 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-<<<<<<< HEAD
-  username: '<%= ENV["DATABASE_USER"] %>'
-  password: '<%= ENV["DATABASE_PASSWORD"] %>'
-  port: '<%= ENV.fetch("DB_PORT") || 5432 %>'
-=======
+
   timeout: 5000
   port: '<%= ENV.fetch("DB_PORT") || 5432 %>'
 
->>>>>>> 0dd9f40 (delete-dockerfile-of-project)
+
 
 development:
   <<: *default
@@ -37,11 +33,6 @@ production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
   database: my_app_production
-<<<<<<< HEAD
- 
-=======
+
   username: '<%= ENV["DATABASE_USER"] %>'
   password: '<%= ENV["DATABASE_PASSWORD"] %>'
-  port: '<%= ENV.fetch("DB_PORT") || 5432 %>'
- 
->>>>>>> 0dd9f40 (delete-dockerfile-of-project)
