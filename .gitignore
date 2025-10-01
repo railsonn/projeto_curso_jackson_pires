@@ -9,7 +9,6 @@
 
 # Ignore all environment files.
 /.env*
-/Dockerfile
 
 # Ignore all logfiles and tempfiles.
 /log/*
